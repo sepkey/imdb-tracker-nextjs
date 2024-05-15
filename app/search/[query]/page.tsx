@@ -1,4 +1,4 @@
-import Results from '@/components/Results';
+import Movies from '@/components/Movies';
 import { assertIsMovies } from '@/types/assertions';
 
 type Props = {
@@ -26,7 +26,7 @@ export default async function SearchPage({ params }: Props) {
         <h1 className="text-center pt-6">No results found</h1>
       )}
 
-      {body && <Results results={body} />}
+      {body && <Movies results={body} />}
     </div>
   );
 }

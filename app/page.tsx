@@ -1,4 +1,4 @@
-import Results from '@/components/Results';
+import Movies from '@/components/Movies';
 import { WatchedMovies } from '@/components/WatchedMovies';
 import { assertIsMovies } from '@/types/assertions';
 
@@ -33,7 +33,7 @@ export default async function Home({ searchParams }: Props) {
   return (
     <div className="grid  grid-cols-[20%_80%] px-2">
       <WatchedMovies />
-      <Results results={body} />
+      <Movies results={body} />
     </div>
   );
 }
