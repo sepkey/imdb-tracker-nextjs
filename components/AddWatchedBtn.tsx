@@ -9,7 +9,8 @@ type Props = {
 };
 
 export default function AddWatchedBtn({ movie, movieId }: Props) {
-  const { handleAddWatched } = useWatched();
+  const { handleAddWatched, watched } = useWatched();
+  const iswatched = watched.map((movie) => movie.imdbID).includes(movieId!);
 
   function handleAdd() {
     const newWatchedMovie = {
@@ -21,6 +22,10 @@ export default function AddWatchedBtn({ movie, movieId }: Props) {
       Year: movie.Year!,
     };
     handleAddWatched(newWatchedMovie);
+  }
+
+  if (iswatched) {
+    return <p className="text-red-400">You already have watched this movie!</p>;
   }
 
   return (

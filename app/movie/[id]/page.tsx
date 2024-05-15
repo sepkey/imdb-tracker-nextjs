@@ -38,13 +38,7 @@ export default async function Movie({ params }: Props) {
           </p>
 
           <div className=" py-8 px-10 rounded-md mb-3 font-medium flex flex-col gap-10">
-            {false ? (
-              <p className="bg-slate-100">
-                You already have watched this movie!
-              </p>
-            ) : (
-              <AddWatchedBtn movie={movie} movieId={params.id} />
-            )}
+            <AddWatchedBtn movie={movie} movieId={params.id} />
           </div>
         </div>
       </header>
