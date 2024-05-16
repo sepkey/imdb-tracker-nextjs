@@ -1,9 +1,16 @@
 'use client';
 import { useWatched } from '@/app/Providers';
 import { WatchedMovie } from './WatchedMovie';
+import useCheckClient from '@/hooks/useCheckClient';
 
 export function WatchedMovies() {
   const { watched } = useWatched();
+  const { isClient } = useCheckClient();
+
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <div className="bg-slate-50 m-3 mt-6">
       <h2 className="text-center text-teal-600 font-bold mt-2">

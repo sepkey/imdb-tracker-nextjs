@@ -31,7 +31,10 @@ export default async function Home({ searchParams }: Props) {
   assertIsMovies(body);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-[80%_20%] px-2">
+    <div
+      className="grid grid-cols-1 sm:grid-cols-[80%_20%] px-2"
+      suppressHydrationWarning
+    >
       <Movies results={body} />
       <WatchedMovies />
     </div>
