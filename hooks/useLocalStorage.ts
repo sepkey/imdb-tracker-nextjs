@@ -1,3 +1,4 @@
+'use client';
 import { IWatchedMovie } from '@/types/types';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 

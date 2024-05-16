@@ -31,9 +31,9 @@ export default async function Home({ searchParams }: Props) {
   assertIsMovies(body);
 
   return (
-    <div className="grid  grid-cols-[20%_80%] px-2">
-      <WatchedMovies />
+    <div className="grid grid-cols-1 sm:grid-cols-[80%_20%] px-2">
       <Movies results={body} />
+      <WatchedMovies />
     </div>
   );
 }
